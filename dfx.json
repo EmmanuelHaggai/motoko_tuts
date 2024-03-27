@@ -4,6 +4,10 @@
       "main": "src/motoko_tuts_backend/main.mo",
       "type": "motoko"
     },
+    "internet_identity" : {
+      "type": "pull",
+      "id": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+    },
     "motoko_tuts_frontend": {
       "dependencies": [
         "motoko_tuts_backend"

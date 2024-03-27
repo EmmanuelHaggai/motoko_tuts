@@ -1,24 +1,71 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>motoko_tuts</title>
-    <base href="/" />
-    <link rel="icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="main.css" />
-  </head>
-  <body>
-    <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
-    </main>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Motoko Full-stack tutorial</title>
+  <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link type="text/css" rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Motoko-Tutorial</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="">Home</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="wrapper">
+
+      <div id="not_loggedin" class="row">
+        <div class="col-md-6">
+          <div class="feature-box">
+            <h1>A simple motoko website</h1>
+            <p>
+              This is going to be a simple motoko website that will show you how to link the frontend
+              with the backend and add a simple internet identity authentication
+            </p>
+            <button class="btn btn-outline-primary" id="login"> Log in </button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="home-img.png" class="img-fluid">
+        </div>
+
+      </div>
+
+      <div id="loggedin" class="row">
+        <div class="col-md-6">
+          <div class="feature-box">
+            <h1>Yay !!</h1>
+            <p>
+              You have logged in successfully
+            </p>
+            <div id="principal"></div>
+            <button id="whoAmI" class="btn btn-outline-info">What is my principal</button>
+            <button class="btn btn-outline-primary" id="logout"> Log out </button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="success.png" class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
 </html>

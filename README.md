@@ -1,8 +1,43 @@
 # motoko_tuts
 
-Welcome to your new motoko_tuts project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+## To create a new project
+To create a new project, use dfx new <project name>
+```bash
+dfx new motoko_tuts
+```
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
+To download bootstrap:
+- [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/download/)
+
+## To integrate with the internet identity:
+Here we will be using the pullable version of the Internet Identity canister, which uses the dfx deps workflow. 
+Open the dfx.json file and add the internet identity canister and define it as a "type": "pull"
+
+    "internet_identity" : {
+      "type": "pull",
+      "id": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+    }
+
+Now pull thee internet identity canister using `dfx deps`
+
+```bash
+dfx deps pull
+```
+Initialize it. Use the '(null)' value passed to the init command to use the dafault values.
+```bash
+dfx deps init internet_identity --argument '(null)'
+```
+
+Install the @dfinity/auth-client package:
+```bash
+npm install @dfinity/auth-client
+```
+
+Deploy the project:
+```bash
+dfx deps deploy
+dfx deploy
+```
 
 To learn more before you start working with motoko_tuts, see the following documentation available online:
 
@@ -26,7 +61,7 @@ If you want to test your project locally, you can use the following commands:
 
 ```bash
 # Starts the replica, running in the background
-dfx start --background
+dfx start --background --clean
 
 # Deploys your canisters to the replica and generates your candid interface
 dfx deploy
